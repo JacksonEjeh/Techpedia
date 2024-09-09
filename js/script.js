@@ -87,7 +87,6 @@ registerForm.addEventListener('submit', (e) => {
         let registrations = JSON.parse(localStorage.getItem('registrations'));
         registrations.push({ schoolName, fineApplied });
         localStorage.setItem('registrations', JSON.stringify(registrations));
-        alert("Registration successful!");
         window.location.reload()
         window.location.href="candidteReg.html"
     }
