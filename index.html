@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                clifford: '#da373d',
+            }
+            }
+        }
+        }
+    </script>
+    <style>
+        @keyframes appear{
+            from{
+                opacity: 0;
+                scale: 0.9;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+        #block{
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0 cover 40%;
+        }
+    </style>
+</head>
+<body>
+    <!-- hero section -->
+    <section id="block" class="lg:mb-[300px] md:mb-[450px] mb-[550px]">
+        <div class="bg-black text-white flex py-1 lg:px-10 px-3 justify-between items-center"><p class="lg:text-sm text-[10px] text-center">Notice: All interested school must register themselves and their candidate on or before September 21, 2024 to participate in the competition. Late registration would come with a penalty of N5,000/- per candidate.</p><p class="font-bold lg:text-2xl text-lg">x</p></div>
+        <div class="bg-[url('./img/bg.webp')] bg-cover bg-center h-[700px] lg:relative">
+            <div class="bg-black/60 h-[100%]">
+                <nav class="bg-white/90 shadow rounded-full fixed top-[35px] left-0 z-50 right-0 w-[95%] mx-auto lg:px-8 px-4 py-1 flex items-center justify-between">
+                    <div class="">
+                        <img class="lg:h-8 h-6 ml-5" src="./img/android.png" alt="">
+                        <h1 class="font-bold lg:text-lg"><span class="text-blue-600">TECH</span><span class="text-orange-500">PEDIA</span></h1>
+                    </div>
+                    <!-- desktopview -->
+                    <ul class="flex items-center gap-10 hidden lg:flex">
+                        <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">HOME</a></li>
+                        <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">ABOUT</a></li>
+                        <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">RULES</a></li>
+                        <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">CONTACT</a></li>
+                    </ul>
+                    <div class="hidden lg:block">
+                        <button id="seeWinners" class="bg-blue-600 px-8 py-3 rounded-full text-white font-bold hover:bg-blue-700">See Winners</button>
+                    </div>
+                    <div class="lg:hidden">
+                        <img class="size-11" src="./img/menu.png" alt="">
+                    </div>
+                </nav>
+                <div class="text-center pt-[350px] px-3 mb-[100px]">
+                    <h1 class="xl:text-8xl lg:text-7xl text-5xl text-white font-bold"><span class="text-blue-600">TECH</span><span class="text-orange-500">PEDIA</span> 2024</h1>
+                    <h1 class="xl:text-5xl lg:text-4xl text-3xl text-white">Quiz Battle</h1>
+                    <p class="lg:text-2xl text-xl text-white">Unleash your brainpower and conquer the quiz arena!</p>
+                </div>
+                <div class="grid lg:grid-cols-3 lg:w-[70%] w-[85%] mx-auto lg:absolute lg:bottom-[-200px] xl:bottom-[-150px] lg:left-0 lg:right-0">
+                    <div class="bg-blue-600 p-5 shadow">
+                        <h1 class="font-bold lg:text-2xl text-lg lg:mb-5 mb-3">REGISTER YOUR SCHOOL</h1>
+                        <p class="font-semibold lg:text-xl text-lg mb-5">Interested school should fill In Our TECHPEDIA 2024 Form</p>
+                        <a href="regpage.html"><button class="border-white border-2 text-white px-8 py-1 font-bold">REGISTER</button></a>
+                    </div>
+                    <div class="bg-slate-300 p-5 shadow">
+                        <h1 class="font-bold lg:text-2xl text-lg lg:mb-5 mb-3">ABOUT</h1>
+                        <p class="font-semibold lg:text-xl text-lg mb-5">Since its inception, Techpedia has undergone numerous upgrades...</p>
+                        <button class="text-blue-600 font-bold">READ MORE ></button>
+                    </div>
+                    <div class="bg-orange-600 p-5 shadow">
+                        <h1 class="font-bold lg:text-2xl text-lg lg:mb-5 mb-3">CONTACT US</h1>
+                        <p class="font-semibold lg:text-xl text-lg mb-5">For more information, Feel free to contact us</p>
+                        <button class="border-white border-2 text-white px-8 py-1 font-bold">REGISTER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- meet us -->
+    <section id="block" class="mb-[100px]">
+        <div>
+            <div class="mb-10">
+                <h1 class="text-center lg:text-5xl text-3xl mb-2 font-bold">Meet Us</h1>
+                <div class="bg-blue-600 h-1 lg:w-[100px] w-[60px] mx-auto"></div>
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-10 lg:w-[90%] w-[85%] mx-auto">
+                <div>
+                    <div>
+                        <img src="./img/pic1.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h1 class="font-semibold lg:text-4xl text-2xl">Samantha</h1>
+                        <p class="lg:text-2xl text-lg">Quiz Master</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./img/pic2.jpeg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h1 class="font-semibold lg:text-4xl text-2xl">Jackson</h1>
+                        <p class="lg:text-2xl text-lg">Tech Wizard</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./img/pic3.jpeg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h1 class="font-semibold lg:text-4xl text-2xl">Emily</h1>
+                        <p class="lg:text-2xl text-lg">Event Coordinator</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="./img/pic4.jpeg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h1 class="font-semibold lg:text-4xl text-2xl">Ayomide</h1>
+                        <p class="lg:text-2xl text-lg">Marketing Guru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why we Quiz section -->
+    <section id="block">
+        <div class="bg-gray-300 p-5">
+            <div class="lg:mb-10 mb-5">
+                <h1 class="text-center lg:text-5xl text-3xl mb-2 font-bold">Why We Quiz</h1>
+                <div class="bg-blue-600 h-1 lg:w-[200px] w-[100px] mx-auto"></div>
+            </div>
+            <div class="lg:w-[70%] w-[95%] mx-auto">
+                <p class="text-xl mb-5 font-medium">
+                    Welcome to the ultimate showdown of wits and wisdom! Our quiz competition is not just a test of knowledge; it's a battle of brains where schools go head-to-head in a quest for glory. Think your school has what it takes? Prove it!
+                </p>
+                <p class="text-xl mb-5 font-medium">
+                    We believe that learning should be fun, and what better way to do that than with a little friendly competition? Our quizzes are designed to challenge even the sharpest minds while keeping the atmosphere light and entertaining. Expect laughter, surprises, and maybe even a few epic fails!
+                </p>
+                <p class="text-xl mb-5 font-medium">
+                    So gather your smartest students, register your school, and get ready to dive into a world of trivia, teamwork, and triumph. The stage is set, the questions are ready, and the prizes are waiting. Are you in?
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Winners Modal -->
+    <div id="winnersModal" class="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-20 rounded-md text-center shadow-md">
+            <span id="close" class="cursor-pointer bg-red-600 px-5 py-1 text-white rounded-md">Close &times;</span>
+            <h1 class="font-semibold text-xl">Congratulations to the Winners!</h1>
+            <div id="winnersList"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('seeWinners').addEventListener('click', ()=>{
+            showWinners();
+            winnersModal.classList.remove('hidden')
+        })
+
+        // Show Winners in Modal
+        function showWinners() {
+            const winnersModal = document.getElementById('winnersModal');
+            winnersModal.classList.remove('hidden')
+            
+            const winnersList = document.getElementById('winnersList');
+            let winners = JSON.parse(localStorage.getItem('winners')) || [];
+            
+            winnersList.innerHTML = '';
+            winners.forEach(winner => {
+                winnersList.innerHTML += `<p>${winner.schoolName}, ${winner.candidateName}, ${winner.percentage}%</p>`;
+            });
+            
+            document.getElementById('close').addEventListener('click', () => {
+                winnersModal.classList.add('hidden')
+            });
+        }
+    </script>
+</body>
+</html>

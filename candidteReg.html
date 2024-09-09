@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                clifford: '#da373d',
+            }
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <div class="bg-black text-white flex py-1 lg:px-10 px-3 justify-between items-center"><p class="lg:text-sm text-[10px] text-center">Notice: All interested school must register themselves and their candidate on or before September 21, 2024 to participate in the competition. Late registration would come with a penalty of N5,000/- per candidate.</p><p class="font-bold lg:text-2xl text-lg">x</p></div>
+    <div class="bg-blue-600 grid grid-cols-2 mb-10">
+        <nav class="bg-white/90 shadow rounded-full fixed top-[35px] left-0 z-50 right-0 w-[95%] mx-auto lg:px-8 px-4 py-1 flex items-center justify-between">
+            <div class="">
+                <img class="lg:h-8 h-6 ml-5" src="./img/android.png" alt="">
+                <h1 class="font-bold lg:text-lg"><span class="text-blue-600">TECH</span><span class="text-orange-500">PEDIA</span></h1>
+            </div>
+            <!-- desktopview -->
+            <ul class="flex items-center gap-10 hidden lg:flex">
+                <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">HOME</a></li>
+                <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">ABOUT</a></li>
+                <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">RULES</a></li>
+                <li class="text-black font-bold text-lg hover:text-blue-600 hover:underline"><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="hidden lg:block">
+                <button class="bg-orange-600 px-8 py-3 rounded-full text-white font-bold hover:bg-blue-600"><a href="regpage.html">JOIN NOW!</a></button>
+            </div>
+            <div class="lg:hidden">
+                <img class="size-11" src="./img/menu.png" alt="">
+            </div>
+        </nav>
+        <div class="bg-blue-600 pb-[50px] pt-[130px]">
+            <h1 class="lg:text-8xl text-6xl font-bold text-right"><span class="text-orange-600">TECH</span></h1>
+            <h1 class="lg:text-8xl text-6xl font-bold text-right mb-3"><span class="text-orange-600">20</span></h1>
+            <h1 class="lg:text-4xl text-2xl font-bold text-right"><span class="text-white">Candidate Reg</span></h1>
+        </div>
+        <div class="bg-orange-600 pb-[50px] pt-[130px]">
+            <h1 class="lg:text-8xl text-6xl font-bold"><span class="text-blue-500">PEDIA</span></h1>
+            <h1 class="lg:text-8xl text-6xl font-bold mb-3"><span class="text-blue-500">24</span></h1>
+            <h1 class="lg:text-4xl text-2xl font-bold"><span class="text-white">istration Form</span></h1>
+        </div>
+    </div>
+    <div>
+        <div class="px-5 py-10 shadow-xl lg:w-[80%] w-[85%] mx-auto bg-gray-100 lg:rounded-lg">
+            <form id="candidateRegisterForm">
+                <div class="mb-5">
+                    <label for="name">Candidate Full Name <span class="text-red-600">*</span></label>
+                    <input id="canName" type="text" placeholder="Your answer" class="focus:border-b-2 border-blue-600 w-[100%] px-3 py-2 rounded-lg outline-none">
+                    <p id="err1" class="absolute text-red-600 text-[12px]"></p>
+                </div>
+                <div class="mb-5">
+                    <label for="email">Email Address <span class="text-red-600">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Your answer" class="focus:border-b-2 border-blue-600 w-[100%] px-3 py-2 rounded-lg outline-none">
+                    <p id="err2" class="absolute text-red-600 text-[12px]"></p>
+                </div>
+                <div class="mb-5">
+                    <label for="phone">Phone Number <span class="text-red-600">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your answer" class="focus:border-b-2 border-blue-600 w-[100%] px-3 py-2 rounded-lg outline-none">
+                   <p id="err3" class="absolute text-red-600 text-[12px]"></p>
+                </div>
+                <div class="mb-5">
+                    <label for="age">Age <span class="text-red-600">*</span></label>
+                    <input type="number" id="age" name="age" placeholder="Your answer" class="focus:border-b-2 border-blue-600 w-[100%] px-3 py-2 rounded-lg outline-none">
+                    <p id="err4" class="absolute text-red-600 text-[12px]"></p>
+                </div>
+                <div class="mb-5">
+                    <label for="experience">Level of Experience in Technology</label>
+                    <select id="experience" name="experience" class="focus:border-b-2 border-blue-600 w-[100%] px-3 py-2 rounded-lg outline-none">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <p id="err5" class="absolute text-red-600 text-[12px]"></p>
+                </div>
+                <div class="mb-5">
+                    <label for="institution">School/Institution</label>
+                    <select name="institution" id="institution" class="focus:border-b-2 border-blue-600 w-[100%] px-3 py-2 rounded-lg outline-none">
+                        <option value="">Select School</option>
+                        <!-- coming from registered Schools -->
+                    </select>
+                    <p id="err5" class="absolute text-red-600 text-[12px]"></p>
+                </div>
+                <div>
+                    <button type="submit" class="bg-blue-600 rounded-md text-white px-4 py-2 hover:bg-blue-700 w-full">Register</button>
+                    <p class="text-center">School/Institution not registered yet? Click <a class="text-blue-500 underline" href="regpage.html">here</a> </p>
+                    <p id="fineMessage" style="color: red; display:none;">Late registration! You will be fined N5000.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/canReg.js"></script>
+</body>
+</html>

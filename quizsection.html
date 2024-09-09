@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                clifford: '#da373d',
+            }
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <!-- startbutton -->
+    <div class="bg-blue-600 grid grid-cols-2 mb-5">
+        <div class="bg-blue-600 pb-[100px] pt-[100px]">
+            <h1 class="lg:text-4xl text-2xl font-bold text-right"><span class="text-white">Welco</span></h1>
+            <h1 class="lg:text-8xl text-6xl font-bold text-right"><span class="text-orange-600">TECH</span></h1>
+            <h1 class="lg:text-8xl text-6xl font-bold text-right mb-3"><span class="text-orange-600">🎉20</span></h1>
+            <h1 class="lg:text-4xl text-2xl font-bold text-right"><span class="text-white">Qu</span></h1>
+        </div>
+        <div class="bg-orange-600 pb-[100px] pt-[100px]">
+            <h1 class="lg:text-4xl text-2xl font-bold "><span class="text-white">me to</span></h1>
+            <h1 class="lg:text-8xl text-6xl font-bold"><span class="text-blue-500">PEDIA</span></h1>
+            <h1 class="lg:text-8xl text-6xl font-bold mb-3"><span class="text-blue-500">24🎉</span></h1>
+            <h1 class="lg:text-4xl text-2xl font-bold "><span class="text-white">iz</span></h1>
+        </div>
+    </div>
+    <div id="startDiv" class="w-[90%] mx-auto mb-5">
+        <h1 class="lg:text-3xl text-xl font-bold mb-5">Dear Techpedian <span id="candidateWelcomeName"></span>, Kindly read instructions before starting your quiz</h1>
+        <div class="mb-5">
+            <ol>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">1.</span> The quiz will be divided into several sections, such as General Knowledge, Mathematics, Science, and Current Affairs.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">2.</span> Each section will have multiple-choice, and short answer questions.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">3.</span> Questions will be shuffled for each participant to prevent cheating. Every participant will receive the same questions but in a different order.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">4.</span> Each section will have a specific time limit. The system will automatically lock submissions when the time expires.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">5.</span> Participants will see a countdown timer while taking the quiz.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">6.</span> No external materials, such as books or electronic devices, are allowed during the quiz.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">7.</span> Any form of cheating will result in immediate disqualification</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">8.</span> The system will automatically grade the quiz as soon as a participant submits their answers.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">9.</span> The system will calculate and display scores based on the correctness of answers.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">10.</span> After all the participants have completed the quiz, the system will display a leaderboard showing the top-scoring students and schools.</li>
+                <li class="lg:text-2xl text-lg mb-3"><span class="font-bold">11.</span> Final results will be announced on the official competition page, and winners will be notified via email.</li>
+            </ol>
+        </div>
+        <button id="startBtn" class="bg-green-500 w-full text-white lg:text-3xl text-xl border px-4 py-2">Start Quiz</button>
+    </div>
+    <!-- Quiz Section -->
+    <div id="quizSection" style="display:none;" class="shadow-md p-5 w-[90%] mx-auto">
+        <h1 class="font-bold text-2xl text-center mb-5">Answer all Question</h1>
+        <p class="absolute lg:top-[400px] top-[320px] lg:left-[600px] left-[130px] lg:text-4xl text-2xl font-bold text-white">Time Remaining: <span id="timer"></span></p>
+        <div id="quizContainer" class="mb-10">
+            <!-- coming from js -->
+        </div>
+        <div>
+            <button id="submitBtn" class="block w-full bg-orange-600 text-white text-xl py-2 rounded-lg hover:bg-blue-600" type="submit">Submit Answer</button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="resultSection" class="fixed top-0 left-0 right-0 bottom-0 bg-black/70 flex items-center justify-center hidden">
+        <div class="bg-white lg:p-20 p-10 rounded-md text-center shadow-md">
+            <h1 class="font-semibold text-xl">Results</h1>
+            <div id="results" class="mb-10"></div>
+            <span id="closeGame" class="bg-red-600 px-5 py-1 text-white rounded-md">close</span>
+        </div>
+    </div>
+    <script src="./js/quiz.js"></script>
+</body>
+</html>
